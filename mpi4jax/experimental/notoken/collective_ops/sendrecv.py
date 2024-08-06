@@ -470,4 +470,4 @@ ad.primitive_transposes[mpi_sendrecv_p] = mpi_sendrecv_transpose_rule
 # assign to the primitive the correct encoder
 mlir.register_lowering(mpi_sendrecv_p, mpi_sendrecv_xla_encode_cpu, platform="cpu")
 mlir.register_lowering(mpi_sendrecv_p, mpi_sendrecv_xla_encode_cuda, platform="cuda")
-mlir.register_lowering(mpi_sendrecv_p, mpi_sendrecv_xla_encode_xpu, platform="xpu")
+mlir.register_lowering(mpi_sendrecv_p, mpi_sendrecv_xla_encode_xpu, platform="sycl")
